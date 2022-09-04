@@ -19,7 +19,7 @@ jobs:
       - name: Clone project
         run: git clone --depth=1 ${{ steps.get-project.outputs.PROJECT }} project
       - name: Build the app
-        working-directory: ./project/
+        working-directory: ./project/Main
         run: |
           if [ ! -f "gradlew" ]; then gradle wrapper; fi
           chmod +x gradlew
